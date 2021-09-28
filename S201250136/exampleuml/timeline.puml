@@ -1,0 +1,12 @@
+@startuml
+actor Geezer #white
+entity result.txt
+entity sorter
+entity line
+entity log
+boundary writer #blue
+sorter -> Geezer : setSorter(sorter)
+line -> Geezer : lineUp(line)
+Geezer -> log : lineUp(line)
+writer -> result.txt : write(log)
+@enduml

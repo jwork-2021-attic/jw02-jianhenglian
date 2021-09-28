@@ -1,0 +1,93 @@
+@startuml
+
+Geezer o-- Sorter
+BubbleSorter --|> Sorter
+Position *-- Gourd
+Gourd *-- Position
+Position o-- Line
+Gourd --|> Linable
+
+interface Linable
+{
+    public void setPosition(Position position);
+
+    public Position getPosition();
+
+    public int getValue();
+}
+enum Gourd
+{
+    ONE,
+    TWO,
+    THREE,
+    FOUR,
+    FIVE,
+    SIX,
+    SEVEN
+    private final int r;
+    private final int g;
+    private final int b;
+    private Position position;
+    public static Gourd getGourdByRank(int rank)
+    public int rank()
+    public void setPosition(Position position)
+    public Position getPosition()
+    public void swapPosition(Gourd another)
+    public int getValue()
+}
+
+interface Sorter
+{
+    public void load(int[] elements);
+    public void sort();
+    public String getPlan();
+}
+class BubbleSorter {
+
+    private int[] a;
+    private String plan
+
+    public void load(int[] a)
+    private void swap(int i, int j)
+
+}
+class Line {
+    private Position[] positions;
+
+    public void put(Linable linable, int i)
+
+    public Linable get(int i)
+
+    public Linable[] toArray()
+
+}
+class Position
+{
+    private Linable linable;
+
+    Position(Linable linable)
+
+    public void setLinable(Linable linable)
+
+}
+class Scene
+{
+    public static void main(String[] args) throws IOException
+}
+class Geezer {
+
+    private static Geezer theGeezer;
+
+    public static Geezer getTheGeezer()
+    private Sorter sorter;
+
+    public void setSorter(Sorter sorter)
+
+    public String lineUp(Line line)
+
+    private String[] parsePlan(String plan)
+
+    private void execute(String step)
+
+}
+@enduml

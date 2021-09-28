@@ -1,0 +1,24 @@
+用例图如下
+
+![用例图](http://www.plantuml.com/plantuml/png/bLJRRXiX47tdAtY4Alw2bQeqafjQgkBAJjnALH_mUkBGObW1cqlT_7kvZD7YjLib3zc1SpWpSnXywRomljyfSWtm6omrambT6kl1agj-lLQG5tGo-VF-07mnJdffD7qNoDUcjnkI_gVr0IoiSDJGpr939cMbi1P1d12fW-AzQA5ixGaDVrs_LhAbZqPkg0D_46D5jSE0DsHueE3RmQ4ZJiWPuPLGFKJibO3kTxaJJ3-_cLwauFRh78DFYodkVPpVBJ2QhN1lEVk6mNGrlSdPh7mK7kXzQ4obfBOv0spF0UiQ67NV3FjoNlZmoJQ71bDmzR8G-XTBwKF0AoDma_4tUlv_nyU2Jw8hS2vHQECVmFBpTqDUXnE2upSU46N49dRu_GS51JlGtl5cN44upkhzfRTIRrFbIkWy2wqIpj5g-FUakeMSITHNWr9Tq27_Ab3mwbZn9i9KNYG3Vd9I2ealX-vFJa5Gwp1qpIXfY3t3HqLL_cPvoIioSg8Bx3mSaddpmLhnmWRLbTTULtYKDXTNoCTLSN9g_90q9fVaonOqaFte2Q36JaZDyhL4t-tMSUeVh7boT3QVFhVGnMAA6lu0rdUDWWY6uv2ZskwQ57oyFV1OVTiuJovzcfDjPmghc9oCXpRw0NTTj0TIpEl2I-ETi0xIU0z6j2RdvF0CRU_XG7CUkcJs9UXDlrD_0G00)
+
+时序图如下
+
+![时序图](http://www.plantuml.com/plantuml/png/NOz13i8W44NtSuf9tBGBFO0Bqvq7C1w0secI89ZXarfFBvHWr1NmtcS-3156aUwEp0L1-IZo4kNDVBCG4W-BXLLYSjZXYKPYK8YsaxDUFljmfJ4aFnbTU5QBCcrqIQZUuUsXbUmv2auhxQhigOpwYHHmVdHbwQdIudFDlwnbMNwzDsTMtELyJuFuAN_r3G00)
+
+
+
+在example中有两个接口sorter和Linable，这两个接口很好的反映了面向对象理念。首先是sorter接口，该接口定义了一个排序的规范，使得在使用排序算法时只需传入该接口的任意一个实现即可。Linable接口也是如此，任何实现了linable的类都可以被放入Line中，从而大大增加了代码的适用性与可修改性。还有这个Position和Gourd的耦合很精彩，我想不到。
+
+至于可修改的地方，我认为有以下几个方面。首先是Sorter的功能可以进一步简化，只需一个可以返回String的方法即可，这样可使代码更加清晰。其次，Gourd的可拓展性太弱，可以将其改为一个类，并写一个该类的工厂来规范快捷的产生Gourd对象。其它的我就没想那么多了。
+
+下面是100个小妖怪排成一队的[录屏]([asciicast:438662 - asciinema](https://asciinema.org/a/438662))
+
+[![asciinema](https://asciinema.org/a/438516.svg)](https://asciinema.org/a/438662)
+
+下面是100个小妖怪排成10*10的矩阵的[录屏]([asciicast:438516 - asciinema](https://asciinema.org/a/438516))
+
+[![asciinema](https://asciinema.org/a/438516.svg)](https://asciinema.org/a/438516)
+
+
+

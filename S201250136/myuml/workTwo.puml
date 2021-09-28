@@ -1,0 +1,69 @@
+@startuml
+SpiritHotel --|> Factory
+QuickSorter --|> Sorter
+ShellSorter --|> Sorter
+MyQueue.Groove o-- MyQueue
+
+
+Interface Factory<T>
+{
+    T next()
+}
+class SpiritHotel
+{
+    Random rand
+    int id
+    SpiritHotel spiritHotel
+    int[] colors
+    SpiritHotel getSpiritHotel()
+    Spirit next()
+}
+class Spirit
+{
+    int red
+    int green
+    int blue
+    int id
+    MyQueue.Groove myGroove
+    int getId()
+    void swapGroove(Spirit another)
+    MyQueue.Groove getMyGroove()
+    void setMyGroove(MyQueue.Groove groove)
+}
+Interface Sorter
+{
+    String sort(int[] targetArray)
+}
+class QuickSorter
+{
+    String sort(int[] targetArray)
+}
+class ShellSorter
+{
+    String sort(int[] targetArray)
+}
+class SnakeMonster
+{
+    Sorter sorter
+    SnakeMonster snakeMonster
+    SnakeMonster getSnakeMonster()
+    void setSorter(Sorter)
+    String go()
+    String dealString()
+}
+class MyQueue
+{
+    Groove[] grooves
+    Groove[] getGrooves()
+    Spirit getSpiritById(int id)
+    void putSpirit(Spirit prettySpirit, int position)
+    String toMatrixString(int row, int column)
+    String toLineString(boolean flag)
+}
+class Scene()
+{
+    void main()
+    int[] getRandomSequential(int n)
+     void swap(int[] tar, int i, int j)
+}
+@enduml
